@@ -54,5 +54,13 @@ public class AppController {
         return "/FruitResult.jsp";
     }
 
+    @RequestMapping("/football")
+    public String football(FootballDTO footballDTO,Model model){
+        System.out.println("----Football Form Submitter----");
+        model.addAttribute("footballDTO",footballDTO);
+        return "/FootballResult.jsp";
+
+    }
+
 
 }
