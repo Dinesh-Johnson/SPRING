@@ -1,10 +1,9 @@
 package com.xworkz.application.controller;
 
-import org.springframework.stereotype.Component;
+import com.xworkz.application.dto.*;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 @RequestMapping("/")
@@ -21,70 +20,37 @@ public class AppController {
     }
 
     @RequestMapping("/name")
-    public String name(@RequestParam String fName, @RequestParam String mName, @RequestParam String lName, @RequestParam String displayName, Model model) {
+    public String name( NameDTO nameDTO, Model model) {
         System.out.println("---- Name Form Submitted ----");
-        model.addAttribute("fName", fName);
-        model.addAttribute("mName", mName);
-        model.addAttribute("lName", lName);
-        model.addAttribute("displayName", displayName);
+        model.addAttribute("nameDTO",nameDTO);
         return "/NameResult.jsp";
     }
 
     @RequestMapping("/hospital")
-    public String hospital(@RequestParam String name, @RequestParam String location, @RequestParam String type, @RequestParam String doctors, @RequestParam String beds, @RequestParam String contact, Model model) {
+    public String hospital(HospitalDTO hospitalDTO, Model model) {
         System.out.println("---- Hospital Form Submitted ----");
-        model.addAttribute("name", name);
-        model.addAttribute("location", location);
-        model.addAttribute("type", type);
-        model.addAttribute("doctors", doctors);
-        model.addAttribute("beds", beds);
-        model.addAttribute("contact", contact);
+        model.addAttribute("hospitalDTO",hospitalDTO);
         return "/HospitalResult.jsp";
     }
 
     @RequestMapping("/rto")
-    public String rto(@RequestParam String code, @RequestParam String city, @RequestParam String officer, @RequestParam String address, @RequestParam String staff, @RequestParam String timings, Model model) {
+    public String rto(RTOdto rtOdto, Model model) {
         System.out.println("---- RTO Form Submitted ----");
-        model.addAttribute("code", code);
-        model.addAttribute("city", city);
-        model.addAttribute("officer", officer);
-        model.addAttribute("address", address);
-        model.addAttribute("staff", staff);
-        model.addAttribute("timings", timings);
+        model.addAttribute("rtOdto",rtOdto);
         return "/RTOResult.jsp";
     }
 
     @RequestMapping("/police")
-    public String police(@RequestParam String station, @RequestParam String area, @RequestParam String city, @RequestParam String officer, @RequestParam String contact, @RequestParam String email,
-                         @RequestParam String staff, @RequestParam String fir, @RequestParam String jurisdiction, @RequestParam String timing, Model model) {
+    public String police(PoliceStationDTO policeStationDTO, Model model) {
         System.out.println("---- Police Form Submitted ----");
-        model.addAttribute("station", station);
-        model.addAttribute("area", area);
-        model.addAttribute("city", city);
-        model.addAttribute("officer", officer);
-        model.addAttribute("contact", contact);
-        model.addAttribute("email", email);
-        model.addAttribute("staff", staff);
-        model.addAttribute("fir", fir);
-        model.addAttribute("jurisdiction", jurisdiction);
-        model.addAttribute("timing", timing);
+        model.addAttribute("policeStationDTO",policeStationDTO);
         return "/PoliceStationResult.jsp";
     }
 
     @RequestMapping("/fruit")
-    public String fruit(@RequestParam String name, @RequestParam String color, @RequestParam String weight, @RequestParam String season, @RequestParam String taste, @RequestParam String country,
-                        @RequestParam String vitamin, @RequestParam String price, @RequestParam String tropical, @RequestParam String ripe, Model model) {
+    public String fruit(FruitsDTO fruitsDTO, Model model) {
         System.out.println("---- Fruit Form Submitted ----");
-        model.addAttribute("name", name);
-        model.addAttribute("color", color);
-        model.addAttribute("weight", weight);
-        model.addAttribute("season", season);
-        model.addAttribute("taste", taste);
-        model.addAttribute("country", country);
-        model.addAttribute("vitamin", vitamin);
-        model.addAttribute("price", price);
-        model.addAttribute("tropical", tropical);
-        model.addAttribute("ripe", ripe);
+        model.addAttribute("fruitsDTO",fruitsDTO);
         return "/FruitResult.jsp";
     }
 
