@@ -11,7 +11,6 @@
 <div class="container mt-5">
     <h2 class="mb-4 text-center">🍨 Ice Cream Order 🍨</h2>
 
-    <!-- ✅ Show validation message if present -->
     <c:if test="${not empty message}">
         <div class="alert alert-danger text-center">${message}</div>
     </c:if>
