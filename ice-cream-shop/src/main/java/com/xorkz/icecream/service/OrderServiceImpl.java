@@ -1,10 +1,12 @@
 package com.xorkz.icecream.service;
 
 import com.xorkz.icecream.dto.OrderDTO;
-import sun.dc.pr.PRError;
+import org.springframework.stereotype.Service;
+
 
 import java.util.*;
 
+@Service
 public class OrderServiceImpl implements OrderService{
 
     private static final List<String> couponList = Arrays.asList("XVERT","HSGSS","FIWND","DWJKD","DKMMS","FIRST","KINDER");
