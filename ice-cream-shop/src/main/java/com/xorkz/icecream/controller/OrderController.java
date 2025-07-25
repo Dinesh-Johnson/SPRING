@@ -16,7 +16,7 @@ public class OrderController {
     @Autowired
     private OrderServiceImpl service;
 
-    @GetMapping("order")
+    @RequestMapping("order")
     public String loadForm() {
         return "Order.jsp";
     }
