@@ -10,10 +10,8 @@
 <div class="container mt-5 text-center">
     <h1 class="mb-4"><strong>🍦 Welcome to Ice Cream Shop</strong></h1>
     <p>Click the button below to place your ice cream order.</p>
+    <a class="btn btn-success btn-lg mt-3" href="Order.jsp">Start Order</a>
 
-    <form action="order" method="get">
-        <button type="submit" class="btn btn-success btn-lg mt-3">Start Order</button>
-    </form>
 </div><br>
 <p style="color:red">${message}</p>
 

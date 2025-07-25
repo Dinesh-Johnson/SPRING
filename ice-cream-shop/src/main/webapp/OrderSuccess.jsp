@@ -11,9 +11,9 @@
     <p>Thank you, <b>${name}</b>.</p>
     <p>Your total is: ₹<b>${total}</b></p>
 
-    <form action="order" method="get">
-        <button type="submit" class="btn btn-secondary">Place Another Order</button>
-    </form>
+
+
+    <a class="btn btn-success btn-lg mt-3" href="Order.jsp">Place Another Order</a>
 </div>
 <div class="container mt-4">
     <a href="index.jsp" class="btn btn-secondary">Home</a>
