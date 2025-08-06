@@ -62,9 +62,9 @@ public class StudentController {
              filename= path.getFileName().toString();
             System.out.println("Uploaded file saved as: " + filename);
 
-            // ✅ Step: Read Excel File using Apache POI
-            InputStream inputStream = new ByteArrayInputStream(bytes); // read directly from MultipartFile
-            Workbook workbook = new XSSFWorkbook(inputStream); // use HSSFWorkbook for .xls files
+
+            InputStream inputStream = new ByteArrayInputStream(bytes);
+            Workbook workbook = new XSSFWorkbook(inputStream);
             Sheet sheet = workbook.getSheetAt(0);
 
             System.out.println("Reading Excel content:");
